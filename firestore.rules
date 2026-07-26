@@ -2,7 +2,7 @@ rules_version = '2';
 service cloud.firestore {
   match /databases/{database}/documents {
     function signedIn() { return request.auth != null; }
-    function admin() { return signedIn() && (request.auth.token.email == 'samarth.chugh@avmschools.ac.in' || request.auth.token.email == 'iforgot3360@gmail.com'); }
+    function admin() { return signedIn() && (request.auth.token.email == 'samarth.chugh@avmschools.ac.in' || request.auth.token.email == 'iforgot3360@gmail.com') || request.auth.token.email == 'tavish.shukla@avmschools.ac.in'; }
     match /users/{uid} {
       allow read: if signedIn();
       allow create: if signedIn() && request.auth.uid == uid && request.resource.data.usernameKey is string && getAfter(/databases/$(database)/documents/usernames/$(request.resource.data.usernameKey)).data.uid == uid;
