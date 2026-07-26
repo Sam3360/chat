@@ -1,8 +1,9 @@
 # Chat 
+## ⚠️ This is a small scale version for personal use 
 Link for use - Sam3360.github.io/chat
 
-## ⚠️ This is a small scale version for personal use 
 
+---
 
 # Zap ⚡
 ## 🙃
